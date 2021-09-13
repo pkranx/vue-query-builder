@@ -8,7 +8,7 @@
       <select
         v-if="typeof rule.operands !== 'undefined'"
         v-model="query.operand"
-        class="form-control mr-2"
+        class="form-control border rounded mr-2"
       >
         <option
           v-for="operand in rule.operands"
@@ -22,7 +22,7 @@
       <select
         v-if="typeof rule.operators !== 'undefined' && rule.operators.length > 1"
         v-model="query.operator"
-        class="form-control mr-2"
+        class="form-control border rounded mr-2"
       >
         <option
           v-for="operator in rule.operators"
@@ -37,7 +37,7 @@
       <input
         v-if="rule.inputType === 'text'"
         v-model="query.value"
-        class="form-control"
+        class="form-control border rounded"
         type="text"
         :placeholder="labels.textInputPlaceholder"
       >
@@ -46,7 +46,7 @@
       <input
         v-if="rule.inputType === 'number'"
         v-model="query.value"
-        class="form-control"
+        class="form-control border rounded"
         type="number"
       >
 
@@ -54,7 +54,7 @@
       <input
         v-if="rule.inputType === 'date'"
         v-model="query.value"
-        class="form-control"
+        class="form-control border rounded"
         type="date"
       >
 
@@ -125,7 +125,7 @@
       <select
         v-if="rule.inputType === 'select' && !hasOptionGroups"
         v-model="query.value"
-        class="form-control"
+        class="form-control border rounded"
         :multiple="rule.type === 'multi-select'"
       >
         <option
@@ -141,7 +141,7 @@
       <select
         v-if="rule.inputType === 'select' && hasOptionGroups"
         v-model="query.value"
-        class="form-control"
+        class="form-control border rounded"
         :multiple="rule.type === 'multi-select'"
       >
         <optgroup

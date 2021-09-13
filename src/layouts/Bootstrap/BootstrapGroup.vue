@@ -1,10 +1,10 @@
 <template>
   <!-- eslint-disable vue/no-v-html -->
   <div
-    class="vqb-group card"
+    class="vqb-group card flex bg-whte flex-col"
     :class="'depth-' + depth.toString()"
   >
-    <div class="vqb-group-heading card-header">
+    <div class="bg-rx-cover border-b card-header px-1 py-1.5 vqb-group-heading">
       <div class="match-type-container form-inline">
         <label
           class="mr-2"
@@ -16,7 +16,7 @@
         <select
           id="vqb-match-type"
           v-model="query.logicalOperator"
-          class="form-control"
+          class="form-control border rounded"
         >
           <option
             v-for="label in labels.matchTypes"
@@ -40,10 +40,10 @@
 
     <div class="vqb-group-body card-body">
       <div class="rule-actions form-inline">
-        <div class="form-group">
+        <div class="form-group flex">
           <select
             v-model="selectedRule"
-            class="form-control mr-2"
+            class="form-control mr-2 border rounded"
           >
             <option
               v-for="rule in rules"
@@ -56,7 +56,7 @@
 
           <button
             type="button"
-            class="btn btn-secondary mr-2"
+            class="btn btn--secondary mr-2 border"
             @click="addRule"
           >
             {{ labels.addRule }}
@@ -65,7 +65,7 @@
           <button
             v-if="depth < maxDepth"
             type="button"
-            class="btn btn-secondary"
+            class="btn btn--secondary border"
             @click="addGroup"
           >
             {{ labels.addGroup }}
