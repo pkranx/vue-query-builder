@@ -64,6 +64,25 @@ let rules = [
         {label: "violet", value: 'Violet'},
       ]
     },
+    {
+      type: "select",
+      id: 'select-custom',
+      label: 'Color custom',
+      operators: [
+        {
+          label: 'Equal',
+          value: '='
+        },
+        {
+          label: 'Not equal',
+          value: '<>'
+        }
+      ],
+      choices: [
+        {label: "Red and similar colors", value: ['Red', 'Pink']},
+        {label: "Black and similar colors", value: 'Black, Gray'},
+      ]
+    },
   ];
 
 new Vue({

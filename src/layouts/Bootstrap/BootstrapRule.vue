@@ -129,8 +129,8 @@
         :multiple="rule.type === 'multi-select'"
       >
         <option
-          v-for="option in selectOptions"
-          :key="option.value"
+          v-for="(option, key) in selectOptions"
+          :key="key"
           :value="option.value"
         >
           {{ option.label }}
