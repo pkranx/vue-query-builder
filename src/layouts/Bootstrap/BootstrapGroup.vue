@@ -16,7 +16,7 @@
         <select
           id="vqb-match-type"
           v-model="query.logicalOperator"
-          class="form-control border rounded"
+          class="form-control max-w-full border rounded"
         >
           <option
             v-for="label in labels.matchTypes"
@@ -40,10 +40,10 @@
 
     <div class="vqb-group-body card-body">
       <div class="rule-actions form-inline">
-        <div class="form-group flex">
+        <div class="form-group flex flex-wrap">
           <select
             v-model="selectedRule"
-            class="form-control mr-2 border rounded"
+            class="form-control max-w-full border rounded mb-1"
           >
             <option
               v-for="rule in rules"

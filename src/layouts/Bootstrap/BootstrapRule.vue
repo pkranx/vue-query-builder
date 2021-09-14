@@ -8,7 +8,7 @@
       <select
         v-if="typeof rule.operands !== 'undefined'"
         v-model="query.operand"
-        class="form-control border rounded mr-2"
+        class="form-control border rounded max-w-full mr-2"
       >
         <option
           v-for="operand in rule.operands"
@@ -22,7 +22,7 @@
       <select
         v-if="typeof rule.operators !== 'undefined' && rule.operators.length > 1"
         v-model="query.operator"
-        class="form-control border rounded mr-2"
+        class="form-control border rounded max-w-full mr-2"
       >
         <option
           v-for="operator in rule.operators"
