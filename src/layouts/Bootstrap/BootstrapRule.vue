@@ -26,10 +26,10 @@
       >
         <option
           v-for="operator in rule.operators"
-          :key="operator"
-          :value="operator"
+          :key="operator.value"
+          :value="operator.value"
         >
-          {{ operator }}
+          {{ operator.label }}
         </option>
       </select>
 
@@ -75,8 +75,8 @@
         v-if="rule.inputType === 'checkbox'"
       >
         <div
-          v-for="choice in rule.choices"
-          :key="choice.value"
+          v-for="(choice, key) in rule.choices"
+          :key="key"
           class="form-check form-check-inline"
         >
           <input
@@ -100,8 +100,8 @@
         v-if="rule.inputType === 'radio'"
       >
         <div
-          v-for="choice in rule.choices"
-          :key="choice.value"
+          v-for="(choice, key) in rule.choices"
+          :key="key"
           class="form-check form-check-inline"
         >
           <input

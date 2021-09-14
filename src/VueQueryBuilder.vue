@@ -60,12 +60,54 @@ export default {
       },
       ruleTypes: {
         "text": {
-          operators: ['equals','does not equal','contains','does not contain','is empty','is not empty','begins with','ends with'],
+          operators: [
+            {
+              label: 'Равно',
+              value: '='
+            },
+            {
+              label: 'Не равно',
+              value: '!'
+            },
+            {
+              label: 'Содержит',
+              value: '%'
+            },
+            {
+              label: 'Не содержит',
+              value: '!%'
+            },
+          ],
           inputType: "text",
           id: "text-field"
         },
         "numeric": {
-          operators: ['=','<>','<','<=','>','>='],
+          operators: [
+            {
+              label: 'Равно',
+              value: '='
+            },
+            {
+              label: 'Не равно',
+              value: '!'
+            },
+            {
+              label: 'Больше',
+              value: '>'
+            },
+            {
+              label: 'Больше или равно',
+              value: '>='
+            },
+            {
+              label: 'Меньше',
+              value: '<'
+            },
+            {
+              label: 'Меньше или равно',
+              value: '<='
+            }
+          ],
           inputType: "number",
           id: "number-field"
         },
@@ -93,7 +135,12 @@ export default {
           id: "select-field"
         },
         "multi-select": {
-          operators: ['='],
+          operators: [
+            {
+              label: 'Равно',
+              value: '='
+            }
+          ],
           choices: [],
           inputType: "select",
           id: "multi-select-field"

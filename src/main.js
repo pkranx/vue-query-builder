@@ -44,7 +44,16 @@ let rules = [
       type: "select",
       id: 'select',
       label: 'Color',
-      operators: ['=', '<>'],
+      operators: [
+        {
+          label: 'Equal',
+          value: '='
+        },
+        {
+          label: 'Not equal',
+          value: '<>'
+        }
+      ],
       choices: [
         {label: "red", value: 'Red'},
         {label: "orange", value: 'Orange'},
